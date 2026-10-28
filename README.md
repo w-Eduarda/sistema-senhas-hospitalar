@@ -56,6 +56,19 @@ O sistema **não simula visualmente** a movimentação dos dados, mas realiza op
   $$\text{Tempo Estimado} = \text{Quantidade de Pacientes à Frente} \times 30\text{ min}$$
 - [x] **Painel de Atendimento Dinâmico:** Exibe a última senha chamada e atualiza as contagens gerais.
 
+
+---
+
+## 📊 Arquitetura e Planejamento Dinâmico
+
+<p align="center">
+  <img src="./docs/planejamento.png" alt="Planejamento Dinâmico do MedPass" width="100%">
+</p>
+
+### 📚 Documentação e Especificações Técnicas
+Todo o projeto foi estruturado com base em um planejamento modular detalhado, contemplando o escopo funcional, o modelo de banco de dados SQLite e o backlog do MVP. Você pode acessar o documento completo na raiz do repositório:
+- **Arquivo:** [Baixar Documento](./docs/planejamento_sistema_senhas_clinica.docx)
+
 ---
 
 ## 🚀 6. Instruções para Executar o Programa
