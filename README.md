@@ -1,8 +1,8 @@
 # 🏥 MedPass — Sistema de Gerenciamento de Senhas para Clínica Médica
 
 ## 👥 Integrantes do Projeto
-* **Maria Eduarda Martins** —
-* **Ingrid Alexandre** — 
+* **Maria Eduarda Martins** 
+* **Ingrid Alexandre** 
 * **Lays Martins** 
 
 ---
