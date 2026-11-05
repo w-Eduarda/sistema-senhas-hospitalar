@@ -1,9 +1,9 @@
 # 🏥 MedPass — Sistema de Gerenciamento de Senhas para Clínica Médica
 
 ## 👥 Integrantes do Projeto
-* **Maria Eduarda Martins** — RGM 49856731
-* **Ingrid Alexandre** — RGM 41160134
-* **Lays Martins** — RGM 46011725
+* **Maria Eduarda Martins** —
+* **Ingrid Alexandre** — 
+* **Lays Martins** 
 
 ---
 
