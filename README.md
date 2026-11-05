@@ -86,7 +86,7 @@ Todo o projeto foi estruturado com base em um planejamento modular detalhado, co
 
 2. **Acessar a pasta do projeto:**
 ```bash
-cd NOME-DO-REPOSITORIO
+cd Sistema-senhas-hospitalar
 
 ```
 
