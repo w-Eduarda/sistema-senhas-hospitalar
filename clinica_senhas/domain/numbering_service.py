@@ -17,6 +17,18 @@ except ImportError:
     from domain.priority_service import PriorityService
 
 
+def _normalizar_tipo(tipo: TipoSenha | str) -> TipoSenha:
+    if isinstance(tipo, TipoSenha):
+        return tipo
+    if isinstance(tipo, str):
+        valor = tipo.strip().upper()
+        try:
+            return TipoSenha(valor)
+        except ValueError as exc:
+            raise ValueError(f"Tipo de senha inválido: {tipo!r}") from exc
+    raise TypeError(f"Tipo de senha inválido: {tipo!r}")
+
+
 class NumberingService:
 
     def __init__(self, connection: sqlite3.Connection):
@@ -37,8 +49,10 @@ class NumberingService:
                tipo: TipoSenha | str, prioridade: Prioridade | str | None = None,
                agora: Optional[datetime] = None) -> Senha:
 
+        tipo_obj = _normalizar_tipo(tipo)
         prioridade_obj = PriorityService.normalizar_prioridade(prioridade) if prioridade is not None else None
         PriorityService.validar(tipo_obj, prioridade_obj)
+
         instante = agora or datetime.now()
         self.db.execute("BEGIN IMMEDIATE")
         try:
@@ -65,4 +79,3 @@ if __name__ == "__main__":
         service = NumberingService(database.connection)
         print(service.emitir(especialidade_id, "CG", "P", "P1").codigo)
         print(service.emitir(especialidade_id, "CG", "N").codigo)
-
