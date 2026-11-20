@@ -2,7 +2,7 @@
 
 ## 👥 Integrantes do Projeto
 * **Maria Eduarda Martins** 
-* **Ingrid Alexandre** 
+* **Ingrid Alexandre🤞🤞** 
 * **Lays Martins** 
 
 ---
