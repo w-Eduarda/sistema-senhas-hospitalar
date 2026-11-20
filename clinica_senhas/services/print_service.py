@@ -1,7 +1,6 @@
-rom __future__ import annotations
+from __future__ import annotations
 
 import os
-import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -81,4 +80,3 @@ class PrintService:
 if __name__ == "__main__":
     service = PrintService()
     print(service.format_ticket("CG-N-001", "Clinico Geral", "01"))
-
