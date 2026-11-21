@@ -1,9 +1,8 @@
 from __future__ import annotations
 
 import sqlite3
-from dataclasses import asdict
 from datetime import datetime
-from typing import Any, Iterable, Optional, TypeVar
+from typing import Any, Optional, TypeVar
 
 from .models import (
     Atendimento, Configuracao, Consultorio, Especialidade, PerfilUsuario,

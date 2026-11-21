@@ -3,7 +3,7 @@ from __future__ import annotations
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
-from typing import Iterator
+from typing import Generator
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DB_PATH = PROJECT_ROOT / "data" / "clinic.db"
@@ -163,13 +163,14 @@ class Database:
         return self
 
     def __exit__(self, exc_type, exc_value, traceback) -> None:
+        del exc_value, traceback
         if exc_type:
             self.connection.rollback()
         self.close()
 
 
 @contextmanager
-def transaction(db_path: str | Path = DEFAULT_DB_PATH) -> Iterator[sqlite3.Connection]:
+def transaction(db_path: str | Path = DEFAULT_DB_PATH) -> Generator[sqlite3.Connection, None, None]:
     db = Database(db_path)
     try:
         db.initialize()
